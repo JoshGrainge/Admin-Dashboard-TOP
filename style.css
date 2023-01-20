@@ -6,7 +6,7 @@
     --blue: rgb(40, 165, 255);
     --gray: rgb(235, 235, 235);
 
-    --header-padding: 25px;
+    --header-padding: 50px;
 
     --right-panel-width: 70%;
 
@@ -61,6 +61,7 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 1em;
+
 }
 
 .header p{
@@ -152,13 +153,29 @@ button{
 
 /* Main content section */
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .main-content{
-    background-color: var(--gray);
-    
     grid-area: main;
+
+    background-color: var(--gray);
 
     display: grid;
     grid-template-columns: 2fr 1fr;
+}
+
+.project-flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+
 }
 
 .your-projects-container{
@@ -225,13 +242,14 @@ button{
     align-items: flex-start;
     gap: 15px;
 
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
 .profile-banner{
     display: flex;
     justify-content: flex-start;
-    padding: 5px;
+    gap: 20px;
+    padding: 10px;
 }
 
 .profile-pic-small{
@@ -243,4 +261,8 @@ button{
     background-image: url(https://pbs.twimg.com/profile_images/891882058930307072/Ff9N-frc_400x400.jpg);
     background-size: 50px;
     background-position: 50%;
+}
+
+.profile-text{
+    text-align: left;
 }
