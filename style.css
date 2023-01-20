@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+
+
+    --blue: rgb(40, 165, 255);
+    --gray: rgb(235, 235, 235);
+
+    --header-padding: 25px;
+
+    font-family: "Helvetica", monospace, sans-serif;
+}
+
+.layout-container{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid: 1fr 4fr / 1fr 5fr;
+    grid-template-areas: "sidebar header"
+                         "sidebar main";
+}
+
+/* Header section */
+
+.header{
+    background-color: white;
+    
+    grid-area: header;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+    font-size: 1.5rem;
+    
+    margin-top: 10px;
+}
+
+.search-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--header-padding);
+}
+
+.searchbar{
+    width: 800px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: var(--gray);
+}
+
+.search-section,
+.account-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+.header p{
+    font-weight: bold;
+}
+
+.header-second-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 var(--header-padding);
+}
+
+.author-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tiny-text{
+    font-size: 1rem;
+}
+
+.author-title{
+    font-size: 1.5rem;
+}
+
+.button-container{
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-picture{
+    background-image: url(./img/1-13.jpg);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+}
+
+button{
+    width: 125px;
+    height: 50px;
+
+    background-color: var(--blue);
+
+    border: 0;
+    border-radius: 25px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Sidebar section */
+
+.sidebar{
+    background-color: var(--blue);
+    
+    grid-area: sidebar;
+}
+
+/* Main content section */
+
+.main-content{
+    background-color: var(--gray);
+    
+    grid-area: main;
+}
