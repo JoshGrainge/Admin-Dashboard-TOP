@@ -7,6 +7,7 @@
     --gray: rgb(235, 235, 235);
 
     --header-padding: 50px;
+    --main-content-padding: 25px;
 
     --right-panel-width: 70%;
 
@@ -153,7 +154,123 @@ button{
 
 /* Main content section */
 
-.main-container{
+.main-content{
+    grid-area: main;
+
+    background-color: var(--gray);
+
+    display: flex;
+    flex: 1 1 0;
+    gap: 25px;
+
+    /* padding: var(--main-content-padding); */
+}
+
+.your-projects-container{
+    flex-grow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding-bottom: var(--main-content-padding);
+}
+
+.card-container{
+    flex: 1 1 0;
+
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.card{
+    background-color: white;
+
+    border-left: 10px solid rgb(222, 255, 77);
+    border-radius: 25px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icons{
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.main-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    margin-right: 50px;
+    padding-bottom: var(--main-content-padding);
+}
+
+.announcment-cotainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0px;
+
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.announcment-divider{
+    border: 1px solid #0003;
+}
+
+.trending-container{
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.main-title{
+    padding: 10px;
+}
+
+.profile-banner{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+}
+
+.profile-pic-small{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+    background-color: black;
+    background-image: url(https://pbs.twimg.com/profile_images/891882058930307072/Ff9N-frc_400x400.jpg);
+    background-size: 50px;
+    background-position: 50%;
+}
+
+.profile-text{
+    text-align: left;
+}
+
+
+
+/* .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -265,4 +382,5 @@ button{
 
 .profile-text{
     text-align: left;
-}
+} */
+
