@@ -46,7 +46,10 @@
 .searchbar{
     width: 800px;
     height: 40px;
+    
     border-radius: 25px;
+    border: 0;
+
     background-color: var(--gray);
 }
 
@@ -119,6 +122,30 @@ button{
     background-color: var(--blue);
     
     grid-area: sidebar;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3em;
+
+    padding-left: 50px;
+
+    font-size: 1.75rem;
+
+    padding-top: 20px;
+
+    color: white;
+}
+
+.sidebar-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.icon{
+    padding-right: 15px;
 }
 
 /* Main content section */
@@ -127,4 +154,7 @@ button{
     background-color: var(--gray);
     
     grid-area: main;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
