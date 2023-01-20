@@ -8,6 +8,8 @@
 
     --header-padding: 25px;
 
+    --right-panel-width: 70%;
+
     font-family: "Helvetica", monospace, sans-serif;
 }
 
@@ -157,4 +159,88 @@ button{
 
     display: grid;
     grid-template-columns: 2fr 1fr;
+}
+
+.your-projects-container{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 15px;
+}
+
+.card{
+    background-color: white;
+
+    border-left: 10px solid rgb(222, 255, 77);
+    border-radius: 25px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icons{
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.main-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px;
+    padding-bottom: 25px;
+}
+
+.announcment-cotainer{
+    width: var(--right-panel-width);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.announcment-divider{
+    border: 1px solid #0003;
+}
+
+.trending-container{
+    width: var(--right-panel-width);
+    text-align: center;
+
+    background-color: white;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 10px 20px;
+}
+
+.profile-banner{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.profile-pic-small{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+    background-color: black;
+    background-image: url(https://pbs.twimg.com/profile_images/891882058930307072/Ff9N-frc_400x400.jpg);
+    background-size: 50px;
+    background-position: 50%;
 }
